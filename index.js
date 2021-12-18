@@ -15,7 +15,7 @@ const updateGist = async (content) => {
     })
 }
 
-var credentials = {
+const credentials = {
     email: process.env.NETFLIX_EMAIL,
     password: process.env.NETFLIX_PASSWORD
 }
@@ -23,9 +23,9 @@ const guid = process.env.NETFLIX_GUID
 const maxItems = process.env.NETFLIX_MAX_ITEMS || 10;
 const minDuration = process.env.NETFLIX_MIN_DURATION || 1200;
 
-var netflix = new Netflix()
+const netflix = new Netflix()
 
-const main = async () => {
+const run = async () => {
     await netflix.login(credentials);
     if (guid) await netflix.switchProfile(guid)
     const history = await netflix.__getViewingHistory(0)
@@ -44,4 +44,4 @@ const main = async () => {
     await updateGist(content);
 }
 
-main();
+run();

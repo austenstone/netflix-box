@@ -23,10 +23,10 @@
 account.
 
    - **GIST_ID:** The ID portion from your gist url: `https://gist.github.com/austenstone/`**`8d945773bc8a9980eb63d463eeb10a59`**.
-   - NETFLIX_GUID: The ID portion from your Netflix profiles [Viewing activity]() url: `https://www.netflix.com/settings/viewed/`**`6FOZYPY6B4FGRCUL6IT2DXS65E`**. Visit [Your Netflix Account](https://www.netflix.com/YourAccount).
    - NETFLIX_MAX_ITEMS: The maximum number of items on the gist.
    - NETFLIX_MIN_DURATION: A filter for the minimum watch duration.
 
 1. Go to the repo **Settings > Secrets**
    - **NETFLIX_EMAIL:** Your Twitter consumer API key.
    - **NETFLIX_PASSWORD:** Your Twitter consumer secret.
+   - NETFLIX_GUID: The ID portion from your Netflix profiles [Viewing activity]() url: `https://www.netflix.com/settings/viewed/`**`6FOZYPY6B4FGRCUL6IT2DXS65E`**. Visit [Your Netflix Account](https://www.netflix.com/YourAccount).

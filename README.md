@@ -14,7 +14,7 @@
 
 1. Create a new public GitHub Gist (https://gist.github.com/)
 1. Create an access token with the `gist` scope and copy it. (https://github.com/settings/tokens/new)
-1. 
+1. Login to [Netflix](https://www.netflix.com/login)
 
 ### Project setup
 
@@ -23,7 +23,7 @@
 account.
 
    - **GIST_ID:** The ID portion from your gist url: `https://gist.github.com/austenstone/`**`8d945773bc8a9980eb63d463eeb10a59`**.
-   - NETFLIX_GUID: The email associated with your Netflix account.
+   - NETFLIX_GUID: The ID portion from your Netflix profiles [Viewing activity]() url: `https://www.netflix.com/settings/viewed/`**`6FOZYPY6B4FGRCUL6IT2DXS65E`**. Visit [Your Netflix Account](https://www.netflix.com/YourAccount).
    - NETFLIX_MAX_ITEMS: The maximum number of items on the gist.
    - NETFLIX_MIN_DURATION: A filter for the minimum watch duration.
 

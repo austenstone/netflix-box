@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "build": "npx ncc build ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,5 +15,8 @@
     "gist-box": "^0.3.1",
     "moment": "^2.29.1",
     "netflix2": "^1.0.1"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3"
   }
 }

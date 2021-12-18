@@ -27,7 +27,10 @@ const netflix = new Netflix()
 
 const run = async () => {
     await netflix.login(credentials);
-    if (guid) await netflix.switchProfile(guid)
+    if (guid) {
+        await netflix.switchProfile(guid)
+        console.log('Switched Netflix profiles successfully! ✅')
+    }
     const history = await netflix.__getViewingHistory(0)
     const filteredHistory = history.viewedItems
         .filter(v => v.duration > minDuration)
@@ -41,7 +44,9 @@ const run = async () => {
             line += moment(v.date).fromNow()
             return line
         }).join('\n')
+    console.log('Got data from Netflix successfully! ✅')
     await updateGist(content);
+    console.log('Updated gist successfully! ✅')
 }
 
 run();

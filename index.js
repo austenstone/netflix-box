@@ -1,6 +1,4 @@
 
-// const { Octokit } = require("@octokit/rest")
-// const fetch = require("node-fetch")
 const Netflix = require('netflix2')
 const { GistBox } = require('gist-box')
 var moment = require('moment');
@@ -29,8 +27,8 @@ var netflix = new Netflix()
 
 const main = async () => {
     await netflix.login(credentials);
-    // if (guid) await netflix.switchProfile(guid)
-    const history = await netflix.__getViewingHistory(0);
+    if (guid) await netflix.switchProfile(guid)
+    const history = await netflix.__getViewingHistory(0)
     const filteredHistory = history.viewedItems
         .filter(v => v.duration > minDuration)
         .slice(0, maxItems);
@@ -39,12 +37,11 @@ const main = async () => {
             let line = ''
             if (v.seriesTitle) line += v.seriesTitle + ' '
             line += v.title + ' '
-            line += new Date(v.duration * 1000).toISOString().substr(11, 8); + ' '
-            line += moment(date).fromNow()
+            line += 'for ' + moment.duration(v.duration * 1000).humanize() + ', '
+            line += moment(v.date).fromNow()
             return line
-        }).join('\n');
-    console.log(content)
-    // await updateGist(content);
+        }).join('\n')
+    await updateGist(content);
 }
 
-main()
+main();

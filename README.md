@@ -1,0 +1,32 @@
+<p align="center">
+  <img width="400" src="./screenshot.png">
+  <h3 align="center">netflix-box</h3>
+  <p align="center">Update a pinned gist to contain your Netflix viewing history</p>
+</p>
+
+---
+
+> 📌✨ For more pinned-gist projects like this one, check out: https://github.com/matchai/awesome-pinned-gists
+
+## Setup
+
+### Prep work
+
+1. Create a new public GitHub Gist (https://gist.github.com/)
+1. Create an access token with the `gist` scope and copy it. (https://github.com/settings/tokens/new)
+1. 
+
+### Project setup
+
+1. Fork this repo
+1. Edit the [environment variables](https://github.com/austenstone/netflix-box/blob/main/.github/workflows/schedule.yml) in `.github/workflows/schedule.yml`:
+account.
+
+   - **GIST_ID:** The ID portion from your gist url: `https://gist.github.com/austenstone/`**`8d945773bc8a9980eb63d463eeb10a59`**.
+   - NETFLIX_GUID: The email associated with your Netflix account.
+   - NETFLIX_MAX_ITEMS: The maximum number of items on the gist.
+   - NETFLIX_MIN_DURATION: A filter for the minimum watch duration.
+
+1. Go to the repo **Settings > Secrets**
+   - **NETFLIX_EMAIL:** Your Twitter consumer API key.
+   - **NETFLIX_PASSWORD:** Your Twitter consumer secret.

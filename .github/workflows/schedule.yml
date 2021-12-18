@@ -1,8 +1,8 @@
 on:
-  schedules:
+  schedule:
     - cron: "*/10 * * * *"
 
-name: Update gist with latest tweet
+name: Update gist with
 
 jobs:
   update-gist:
@@ -10,9 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: update-gist
-        uses: matchai/bird-box@master
+        uses: ./
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIST_ID: 8d945773bc8a9980eb63d463eeb10a59
           NETFLIX_EMAIL: ${{ secrets.NETFLIX_EMAIL }}
           NETFLIX_PASSWORD: ${{ secrets.NETFLIX_PASSWORD }}
+          NETFLIX_GUID: ${{ secrets.NETFLIX_GUID }}
